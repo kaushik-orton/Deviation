@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "symbol": "BTCUSDT",
+    "side": "long",
+    "entryPrice": 102600,
+    "tag": "",
+    "signalTime": "2025-06-01T13:35:06.882Z",
+    "entryPrice2": 101300,
+    "hit1": false,
+    "hit2": false,
+    "id": "BTCUSDT_102600_1748784906907"
+  }
+]
