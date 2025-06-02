@@ -28,6 +28,7 @@ async function loadAlerts() {
 }
 
 async function saveAlerts(alerts) {
+  // Overwrite all alerts (used for /alerts-overwrite)
   const batch = db.batch();
   const ref = db.collection(ALERTS_COLLECTION);
   const existing = await ref.get();
@@ -153,3 +154,5 @@ app.post('/alerts-overwrite', async (req, res) => {
 app.listen(PORT, () => {
   sendTelegramMessage('.', 'HTML').catch(e => console.error('Telegram send error:', e.message));
 });
+
+// Removed IIFE that added a test alert and sent a Telegram message on startup for production readiness.
